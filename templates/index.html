@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetWords</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px;
+            font-family: sans-serif;
+            margin-bottom: 90px;
+            color: #fff;
+            background-color: #010101;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input {
+            border: 2px solid #010101;
+            border-radius: 10px;
+            padding: 5px 15px;
+            font-family: sans-serif;
+            font-size: large;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            border: 2px solid #010101;
+            border-radius: 10px;
+            font-size: large;
+            padding: 7px;
+            color: #010101;
+            background-color: #fff;
+            transition: .3s;
+        }
+
+        .button:hover {
+            background-color: #010101;
+            color: #fff;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Create words from any text!</h1>
+        <h2>If they exist, of course</h2>
+    </header>
+
+    <main>
+        <div class="form">
+            <div class="">
+                <input id="input" class="input" type="text">
+            </div>
+            <div class="">
+                <button id="submit" class="button">Get results</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const submitButton = document.getElementById('submit'),
+              input = document.getElementById('input');
+        submitButton.onclick = () => {
+            window.location.assign(input.value);
+        }
+    </script>
+</body>
+</html>
